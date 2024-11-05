@@ -27,7 +27,6 @@
             .catch(error =>{
                 console.error('Hubo un problema con la peticion fetch:', error);
             });
-            console.log('Hola mundo...!!')
         
 
         async function mostrarAsync() {
@@ -37,10 +36,9 @@
                     throw new Error("Error en la peticion");
                     
                 }
-                const data=await response.json();
+                const data = await response.json();
                 // console.log('Datos recibidos: ',data);
                 mostrarData(data);
-                console.log('Hola mundo...!!')
             }catch(error){
                 console.error('Hubo un problema con la peticion fetch',error);
             }
@@ -82,7 +80,6 @@
             const form = document.getElementById('FrmAlumno');
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-            console.log(data);
         }
 
         async function eliminar(id) {
